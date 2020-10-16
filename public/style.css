@@ -1,0 +1,18 @@
+body {
+    background-color: whitesmoke;
+  }
+
+  .burger-photo {
+    max-width: 100%;
+  }
+
+  #page-name {
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .main-header {
+      font-size: 4em;
+      font-family: courier;
+      padding: 10px;
+  }
