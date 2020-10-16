@@ -1,29 +1,38 @@
 <h1>EAT DA BURGER!</h1>
 
 <section class="row">
-        <div class="col-md-6 col-left">
-            <table>
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        {{> burgers/burger-block}}
-                    {{/unless}}
-                {{/each}}
-            </table>
+    <h1>Available Burgers:</h1>
+    <div class="col-md-6 col-left">
+
+        {{#each burgers}}
+        {{#unless devoured}}
+        <div class"col-md-9">{{id}}. {{burger_name}}</div>
+        <div class="col md-3">
+            <form class="devour-form button-size">
+                <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+                <button type="submit" class="btn btn-default">Devour it!</button>
+            </form>
         </div>
-        <div class="col-md-6 col-right">
-            {{#each burgers}}
-                {{#if devoured}}
-                    <div>{{id}}. {{burger_name}}</div>
-                {{/if}}
-            {{/each}}        
-        </div>          
-    </section>
+
+        {{/unless}}
+        {{/each}}
+
+    </div>
+    <div class="col-md-6 col-right">
+        <h1>Devoured Burgers:</h1>
+        {{#each burgers}}
+        {{#if devoured}}
+        <div>{{id}}. {{burger_name}}</div>
+        {{/if}}
+        {{/each}}
+    </div>
+</section>
 
 <form class="create-form">
     <div class="form-group">
         <label for="name"></label>
-        <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="Place burger order here!?"></textarea>
+        <textarea id="name" name="burger-name" rows="2" cols="40" placeholder="Place burger order here!"></textarea>
     </div>
     <button type="submit">Add Burger</button>
-</form>     
+</form>
 </div>
