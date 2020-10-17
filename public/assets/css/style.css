@@ -17,7 +17,7 @@ body {
   font-family: courier;
   padding: 7px;
   text-align: center;
-  border: solid 3px rgb(206, 48, 48);
+  border: dotted 3px rgb(206, 48, 48);
 }
 
 .avail-col {
@@ -33,3 +33,4 @@ body {
 .burger-name {
   padding: 10 px;
 }
+
