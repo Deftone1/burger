@@ -1,8 +1,15 @@
-<h1>EAT DA BURGER!</h1>
+<div class="burger-photo">
+    <img id="main-image" src="./assets/images/burger.png" width="325" height="325" frameBorder="0" class="burger"></img>
+    <img id="main-image" src="./assets/images/burger.png" width="325" height="325" frameBorder="0" class="burger"></img>
+    <img id="main-image" src="./assets/images/burger.png" width="325" height="325" frameBorder="0" class="burger"></img>
+</div>
+<h1 class="main-header">EAT DA BURGER!</h1>
 
 <section class="row">
-    <h1>Available Burgers:</h1>
-    <div class="col-md-6 col-left">
+
+
+    <div class="col-md-6 col-left avail-col">
+        <h1 class=>Available Burgers:</h1>
 
         {{#each burgers}}
         {{#unless devoured}}
@@ -12,13 +19,14 @@
                 <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
                 <button type="submit" class="btn btn-default">Devour it!</button>
             </form>
+            <br>
         </div>
 
         {{/unless}}
         {{/each}}
-
     </div>
-    <div class="col-md-6 col-right">
+
+    <div class="col-md-6 col-right dev-col">
         <h1>Devoured Burgers:</h1>
         {{#each burgers}}
         {{#if devoured}}

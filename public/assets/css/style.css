@@ -4,6 +4,7 @@ body {
 
   .burger-photo {
     max-width: 100%;
+    text-align: center;
   }
 
   #page-name {
@@ -12,7 +13,23 @@ body {
   }
 
   .main-header {
-      font-size: 4em;
+      font-size: 5em;
       font-family: courier;
       padding: 10px;
+      text-align: center;
+  }
+
+  .avail-col {
+    text-align: center;
+    margin: 0 auto;
+    
+  }
+
+  .dev-col {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .burger-name {
+    padding: 10 px;
   }
