@@ -20,4 +20,15 @@ router.post("/api/burgers", function(req, res) {
         res.json({ id: result.insertId });
     });
 });
+
+router.put("/api/burgers/:id", function(req, res) {
+    console.log(req.params.id, req.body)
+    burger.update(req.params.id, function(result) {
+        if (result.changedRows === 0) {
+            // If no rows were affected, then the ID must not exist, so 404
+            return res.status(404).end();
+          }
+          res.status(200).end();
+    });
+});
 module.exports = router;
