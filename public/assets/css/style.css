@@ -1,35 +1,35 @@
 body {
-    background-color: whitesmoke;
-  }
+  background-color: whitesmoke;
+}
 
-  .burger-photo {
-    max-width: 100%;
-    text-align: center;
-  }
+.burger-photo {
+  max-width: 100%;
+  text-align: center;
+}
 
-  #page-name {
-      margin: 0 auto;
-      text-align: center;
-  }
+#page-name {
+  margin: 0 auto;
+  text-align: center;
+}
 
-  .main-header {
-      font-size: 5em;
-      font-family: courier;
-      padding: 10px;
-      text-align: center;
-  }
+.main-header {
+  font-size: 5em;
+  font-family: courier;
+  padding: 7px;
+  text-align: center;
+  border: solid 3px rgb(206, 48, 48);
+}
 
-  .avail-col {
-    text-align: center;
-    margin: 0 auto;
-    
-  }
+.avail-col {
+  text-align: center;
+  margin: 0 auto;
+}
 
-  .dev-col {
-    text-align: center;
-    margin: 0 auto;
-  }
+.dev-col {
+  text-align: center;
+  margin: 0 auto;
+}
 
-  .burger-name {
-    padding: 10 px;
-  }
+.burger-name {
+  padding: 10 px;
+}
