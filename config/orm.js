@@ -1,63 +1,35 @@
-const connection = require("../config/connection.js");
 
-// function below prints to the question marks
-function questionMarks(num) {
-  const arr = [];
-  for (var i = 0; i < num; i++){
-    arr.push("?")
+var connection = require("../config/connection.js");
+
+var orm = {
+  selectAll: function(tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  insertOne: function(table, value, cb) {
+    var queryString = "INSERT INTO " + table + " SET ?";
+    connection.query(queryString, value, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  
+  updateOne: function(table, condition, id, cb) {
+    var queryString = "UPDATE " + table + " SET " + condition + " WHERE id = ?";
+    connection.query(queryString, id, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   }
-  return arr.toString();
 };
-
-
-const orm = {
-    selectAll: (tableInput, cb) => {
-      const queryString = "SELECT * FROM ??";
-      connection.query(queryString, [tableInput], (err, result) => {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-    },
-    insertOne: (table, newRowData, cb) => {
-      const queryString = "INSERT INTO ?? SET ?";
-      const values = [table, newRowData];
-  
-      connection.query(queryString, values, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-    },
-  
-   
-    // Example of condition: { id: 1 }
-    updateOne: (table, updateValues, condition, cb) => {
-      const queryString = "UPDATE ?? SET ? WHERE ?";
-      const values = [table, updateValues, condition];
-  
-      console.log(queryString);
-      connection.query(queryString, values, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-    },
-    // Delete row(s) from table with given condition.
-    // Example condition: { id: 1 }
-    deleteOne: (table, condition, cb) => {
-      const queryString = "DELETE FROM ?? WHERE ? LIMIT 1";
-      const values = [table, condition];
-      connection.query(queryString, values, (err, result) => {
-        if (err) {
-          throw err;
-        }
-        cb(result);
-      });
-    },
-  };
 
 module.exports = orm;
