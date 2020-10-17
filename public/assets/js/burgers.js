@@ -1,5 +1,5 @@
 $(() => {
-  $(".devour-form").on("submit", function (event) {
+  $(".devour-form").on("click", function (event) {
     event.preventDefault();
     var burger_id = $(this).children(".burger_id").val();
     console.log(burger_id);
@@ -8,30 +8,31 @@ $(() => {
     // Send the PUT request.
     $.ajax(`/api/burgers/${burger_id}`, {
       type: "PUT",
-      data: burgerDevoured
+      data: burgerDevoured,
      
-      // contentType: "application/json; charset=UTF-8",
+        // contentType: "application/json; charset=UTF-8",
     }).then(() => {
         console.log('Burger has been devoured');
       location.reload();
     });
   });
 
-  // $(".create-form").on("submit", function(event) {
-  //   event.preventDefault();
+  $(".create-form").on("submit", function(event) {
+    event.preventDefault();
 
-  //   var newBurger = {
-  //     name: $("burger-name").val().trim()
-  //   };
+    var newBurger = {
+      name: $("#name").val().trim(),
+      devoured: false
+    };
 
-  //   $.ajax("/api/burgers", {
-  //     type: "POST",
-  //     data: newBurger
-  //   }).then(() => {
-  //     console.log("Your burger has been added!");
-  //     location.reload();
-  //   })
-  // });
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger
+    }).then(() => {
+      console.log("Your burger has been added!");
+      location.reload();
+    })
+  });
 
 });
 
