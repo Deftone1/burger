@@ -24,3 +24,7 @@ I was able to successfully collect the user input from the form but couldn't fig
 
 * HTML
 
+# Application Screenshot
+
+![burger-app-screen-shot](https://user-images.githubusercontent.com/66435213/96371953-5d2cbe00-1119-11eb-9ce5-3c0b31f13fcd.png)
+
