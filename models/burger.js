@@ -1,24 +1,21 @@
 const orm = require("../config/orm.js");
 
+// ORM burger variable 
 const burger = {
     all: (cb) => {
-      orm.selectAll("burgers", (res) => {
+      orm.all("burgers", (res) => {
         cb(res);
       });
     },
     
     create: (newBurger, cb) => {
-      orm.insertOne("burgers", newBurger, (res) => {
+      console.log(newBurger);
+      orm.create("burgers", newBurger, (res) => {
         cb(res);
       });
     },
     update: (updateBurger, criteria, cb) => {
-      orm.updateOne("burgers", updateBurger, criteria, (res) => {
-        cb(res);
-      });
-    },
-    delete: (condition, cb) => {
-      orm.deleteOne("burgers", condition, (res) => {
+      orm.update("burgers", updateBurger, criteria, (res) => {
         cb(res);
       });
     },

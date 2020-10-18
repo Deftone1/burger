@@ -21,10 +21,12 @@ $(() => {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#name").val().trim(),
+      burger_name: $("#name").val().trim(),
       devoured: false
+     
     };
 
+    // ajax POST request
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
