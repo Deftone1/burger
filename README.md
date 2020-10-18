@@ -6,7 +6,9 @@ One of the main takeaways from the application is the use of backend databases t
 
 This application was the most difficult assignment to put together, and unfortunately I was not able to get it fully functioning.
 
-I was able to successfully collect the user input from the form but couldn't figure out how to display it on the page, along with the devoured burger section. I hope to revisit the project at some point once I am more familiar with the topics and make it fully functional.
+I was able to successfully collect the user input from the form but couldn't figure out how to display it on the page, along with the devoured burger section. I also was able to successfully pull my data from the created Database in MySql.
+
+I hope to revisit the project at some point once I am more familiar with the topics and make it fully functional.
 
 # Languages 
 
@@ -28,3 +30,8 @@ I was able to successfully collect the user input from the form but couldn't fig
 
 ![burger-app-screen-shot](https://user-images.githubusercontent.com/66435213/96371953-5d2cbe00-1119-11eb-9ce5-3c0b31f13fcd.png)
 
+
+# Portfolio Link
+
+Below is the link to my portfolio, with an added link to the burger app.
+https://deftone1.github.io/an-updated-responsive-portfolio-of-paul/
