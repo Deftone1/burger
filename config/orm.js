@@ -11,13 +11,10 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(table, value, cb) {
+  insertOne: function(table, cols, value, cb) {
     var queryString = "INSERT INTO " + table + " SET ?";
     connection.query(queryString, value, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
+      i
     });
   },
   
