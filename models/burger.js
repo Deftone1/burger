@@ -15,6 +15,7 @@ const burger = {
       });
     },
     update: (updateBurger, criteria, cb) => {
+      console.log(updateBurger, criteria);
       orm.update("burgers", updateBurger, criteria, (res) => {
         cb(res);
       });

@@ -24,6 +24,7 @@ var orm = {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
+        console.log(err);
         throw err;
       }
       cb(result);
@@ -33,7 +34,7 @@ var orm = {
 
   // function to create table entry for mysql
   create: function(table, newRowData, cb) {
-    // console.log(objToSql());
+    console.log(table, newRowData);
     const queryString = "INSERT INTO ?? SET ?";
     const values = [table, newRowData];
     // queryString += " (";
@@ -54,6 +55,7 @@ var orm = {
   
 // function updates mysql table entry
   update: function(table, objColVals, condition, cb) {
+    console.log("inside the UPDATE ORM");
     var queryString = "UPDATE " + table;
     queryString += " SET ";
     queryString += objToSql(objColVals);

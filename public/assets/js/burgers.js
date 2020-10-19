@@ -2,11 +2,11 @@ $(() => {
   $(".devour-form").on("click", function (event) {
     event.preventDefault();
     var burger_id = $(this).children(".burger_id").val();
-    console.log(burger_id);
-    const burgerDevoured = { devoured: true };
     
+    const burgerDevoured = { devoured: 1 };
+    console.log(burger_id, burgerDevoured);
     // Send the PUT request.
-    $.ajax(`/api/burgers/${burger_id}`, {
+    $.ajax("/api/burgers/" + burger_id, {
       type: "PUT",
       data: burgerDevoured,
      
@@ -22,7 +22,7 @@ $(() => {
 
     var newBurger = {
       burger_name: $("#name").val().trim(),
-      devoured: false
+      devoured: 0
      
     };
 
